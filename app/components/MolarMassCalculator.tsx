@@ -15,11 +15,12 @@ export default function MolarMassCalculator() {
       const molarMass = calculateMolarMass(formula)
       setResult(molarMass)
       setError(null)
-    } catch (err) {
-      setError('Arrr! Ye formula be cursed! Try again, ye scurvy dog!')
+    } catch {
+      setError('Arrr! Invalid formula, ye scurvy dog!')
       setResult(null)
     }
   }
+
 
   return (
     <div className="space-y-4">
