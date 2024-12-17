@@ -18,10 +18,12 @@ export default function MolarMassPlunderer() {
       setResult(molarMass)
       setError(null)
     } catch (err) {
+      console.error(err)  
       setError('Arrr! Invalid formula, ye scurvy dog!')
       setResult(null)
     }
   }
+  
 
   const handleKeyPress = (key: string) => {
     if (key === 'backspace') {
