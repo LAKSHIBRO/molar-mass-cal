@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { calculateMolarMass } from '../utils/MolarMassCalculator'
+import { calculateMolarMass } from '../utils/molarMassCalculator'
 
 export default function MolarMassCalculator() {
   const [formula, setFormula] = useState('')
@@ -42,4 +42,4 @@ export default function MolarMassCalculator() {
     </div>
   )
 }
-
+1

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { calculateMolarMass } from '../utils/molarMassCalculator'
 import { FlaskRoundIcon as Flask, Scale, AlertTriangle } from 'lucide-react'
+import { PirateKeyboard } from './PirateKeyboard'
 
 export default function MolarMassPlunderer() {
   const [formula, setFormula] = useState('')
@@ -22,6 +23,16 @@ export default function MolarMassPlunderer() {
     }
   }
 
+  const handleKeyPress = (key: string) => {
+    if (key === 'backspace') {
+      setFormula(formula.slice(0, -1))
+    } else if (key === 'clear') {
+      setFormula('')
+    } else {
+      setFormula(formula + key)
+    }
+  }
+
   return (
     <div className="space-y-4">
       <div className="relative">
@@ -34,6 +45,7 @@ export default function MolarMassPlunderer() {
         />
         <Flask className="absolute left-3 top-1/2 transform -translate-y-1/2 text-amber-500 w-5 h-5" />
       </div>
+      <PirateKeyboard onKeyPress={handleKeyPress} />
       <Button onClick={handleCalculate} className="w-full bg-amber-600 hover:bg-amber-700 text-slate-900 flex items-center justify-center gap-2">
         <Scale className="w-5 h-5" />
         Calculate Molar Booty
