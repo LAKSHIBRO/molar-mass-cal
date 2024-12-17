@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { calculateMolarMass } from '../utils/molarMassCalculator'
+import { calculateMolarMass } from "../utils/MolarMassCalculator";
 import { FlaskRoundIcon as Flask, Scale, AlertTriangle } from 'lucide-react'
 import { PirateKeyboard } from './PirateKeyboard'
 
