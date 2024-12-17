@@ -17,8 +17,7 @@ export default function MolarMassPlunderer() {
       const molarMass = calculateMolarMass(formula)
       setResult(molarMass)
       setError(null)
-    } catch (err) {
-      console.error(err)  
+    } catch {
       setError('Arrr! Invalid formula, ye scurvy dog!')
       setResult(null)
     }
