@@ -31,7 +31,7 @@ To get this treasure map workin' on yer local machine, follow these steps:
 
 1. Clone the repository:
    \`\`\`
-   git clone https://github.com/yourusername/pirates-molar-mass-plunderer.git
+   git clone https://github.com/LAKSHIBRO/molar-mass-cal
    \`\`\`
 
 2. Navigate to the project directory:
